@@ -1,0 +1,72 @@
+/*device模块css*/
+#device{
+    width: 100%;
+    height: 460px;
+    float: left;
+    background: url("../image/home.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+#device-me{
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.80);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+/*评价*/
+#client{
+    width: 70%;
+    height: 300px;
+    margin: 80px auto;
+    position: relative;
+}
+#client h2{
+    height: 74px;
+    color: rgb(255, 5, 85);
+    text-align: center;
+    line-height: 74px;
+    margin-bottom: 30px;
+}
+
+#description li{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    display: none;
+}
+#description li span{
+    text-align: right;
+    float: right;
+}
+#description .des-show{
+    display: block;
+}
+/*评价下方切换*/
+#circle{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+}
+#m-cir{
+    width: 132px;
+    margin: 0 auto;
+}
+#circle li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px;
+    border: 2px solid #fff;
+}
+#circle .act{
+    background: #fff;
+}

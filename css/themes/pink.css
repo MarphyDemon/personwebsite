@@ -1,0 +1,86 @@
+﻿
+
+/* =============================================================
+   contact
+ ============================================================ */
+#hire-me h1 {
+    color: rgb(255, 5, 85);
+}
+
+#news button{
+    border-color: rgb(255, 5, 85);
+}
+
+#IDnews h3{
+    color: rgb(255, 5, 85);
+}
+/* =============================================================
+  device
+ ============================================================ */
+
+#client h2{
+    color: rgb(255, 5, 85);
+}
+
+/* =============================================================
+  header
+ ============================================================ */
+#header img{
+    border: 5px solid rgb(255,5,85);
+}
+#left-head h1{
+    color: rgb(255,5,85);
+}
+#left-head a{
+    border: 3px solid rgb(255,5,85);
+}
+#nav ul a .icon-active{
+    background: rgb(255,5,85);
+}
+#right-head h1{
+    color: rgb(255, 5, 85);
+}
+#right-head a{
+    border: 3px solid rgb(255,5,85);
+}
+
+#back-top{
+    background-color: rgb(255, 5, 85);
+}
+/* =============================================================
+        project
+ ============================================================ */
+#project-des h2{
+    color: rgb(255, 5, 85);
+}
+
+  /*=====================================
+      resume
+    ===================================*/
+
+#download_txt h2{
+    color:  rgb(255, 5, 85);
+}
+#download_txt a{
+    border: 4px solid rgb(255,5,85);
+}
+#details #sel-skill ul .board:after {
+    border-bottom-color: rgb(255, 15, 101) !important;
+}
+.ski span{
+    color: rgb(255, 5, 85);
+}
+    /*=====================================
+        skill
+    ===================================*/
+
+.wave h2{
+    color: rgb(255, 5, 85);
+}
+#download_PDF h2{
+    color:  rgb(255, 5, 85);
+}
+#download_PDF a{
+    border: 4px solid rgb(255,5,85);
+}
+

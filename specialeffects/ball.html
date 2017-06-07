@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            /*-webkit-perspective: 600px;*/
+            /*perspective-origin: center -200%;*/
+            background: #999;
+        }
+        #container {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            margin: 100px auto;
+            /*border:4px solid #153cd1;*/
+            position: relative;
+
+            /*-webkit-perspective: 600px;*/
+            -webkit-transform-style: preserve-3d;
+
+            -webkit-animation: cubecircle 1s linear infinite;
+        }
+        @-webkit-keyframes cubecircle {
+            from{
+                /*-webkit-transform: rotateY(-360deg);*/
+            }
+            to{
+                -webkit-transform: rotate3d(0,1,0,-360deg);
+                /*-webkit-transform: rotateY(-360deg);*/
+            }
+        }
+
+        #container li{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            margin: 100px auto;
+            /*border: 4px solid #1ecdd1;*/
+            list-style: none;
+            position: absolute;
+            transform-origin: center center;
+            /*-webkit-transform: rotateY(1deg);*/
+        }
+        #container li:nth-child(2n-1){
+            /*background: #000000;*/
+            border:4px solid #00c5ff;
+        }
+        #container li:nth-child(2n){
+            /*background: white;*/
+            border: 4px solid #ff3ac9;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+
+</div>
+<script>
+    var oContainer = document.getElementById("container");
+    var html = "";
+    for (var i = 0; i < 360; i++) {
+        html += "<li></li>";
+    }
+    oContainer.innerHTML = html;
+    var aLi = document.getElementsByTagName("li");
+    for (var j = 0; j < 360; j++) {
+        aLi[j].style.WebkitTransform="rotateY("+j+'deg)';
+    }
+</script>
+
+</body>
+</html>

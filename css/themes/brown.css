@@ -1,0 +1,87 @@
+﻿
+
+
+
+/* =============================================================
+   contact
+ ============================================================ */
+#hire-me h1 {
+    color: #9b8e00;
+}
+
+#news button{
+    border-color: #9b8e00;
+}
+
+#IDnews h3{
+    color: #9b8e00;
+}
+/* =============================================================
+  device
+ ============================================================ */
+
+#client h2{
+    color: #9b8e00;
+}
+
+/* =============================================================
+  header
+ ============================================================ */
+#header img{
+    border: 5px solid  #9b8e00;
+}
+#left-head h1{
+    color:  #9b8e00;
+}
+#left-head a{
+    border: 3px solid  #9b8e00;
+}
+#nav ul a .icon-active{
+    background:  #9b8e00;
+}
+#right-head h1{
+    color: #9b8e00;
+}
+#right-head a{
+    border: 3px solid  #9b8e00;
+}
+
+#back-top{
+    background-color: #9b8e00;
+}
+/* =============================================================
+        project
+ ============================================================ */
+#project-des h2{
+    color: #9b8e00;
+}
+
+/*=====================================
+    resume
+  ===================================*/
+
+#download_txt h2{
+    color:  #9b8e00;
+}
+#download_txt a{
+    border: 4px solid #9b8e00;
+}
+#details #sel-skill ul .board:after {
+    border-bottom-color: #9b8e00 !important;
+}
+.ski span{
+    color: #9b8e00;
+}
+/*=====================================
+    skill
+===================================*/
+
+.wave h2{
+    color: #9b8e00;
+}
+#download_PDF h2{
+    color:  #9b8e00;
+}
+#download_PDF a{
+    border: 4px solid #9b8e00;
+}

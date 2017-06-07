@@ -1,0 +1,113 @@
+/*
+*   about me设计
+*/
+
+#about-me{
+    width: 100%;
+    height: 380px;
+    position: relative;
+}
+#about{
+    width: 80%;
+    height: 100%;
+    line-height: 100%;
+    margin: 40px auto;
+}
+/* about左侧设计 */
+#left-about{
+    width: 30%;
+    height: 100%;
+    float: left;
+    line-height: 100%;
+    /*padding: 0 20px;*/
+}
+#left-about h1 {
+    /*height: 40px;*/
+    line-height: 40px;
+    color: rgb(255,5,85);
+    font-size: 40px;
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+/* 此处实现about彩色线条  使用css3background-image:linear-gradient  */
+.css3-linear{
+    max-width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    border: 0;
+    margin: 20px 20px 40px 0;
+    background: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+/* know QQ 微信 github 链接 */
+#know{
+    width: 150%;
+    height: 110px;
+    margin: 10px 0;
+}
+#know a{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    /*line-height: 90px;*/
+    text-align: center;
+}
+#know a:nth-child(1){
+    border:2px solid #2568fd;
+}
+#know a:nth-child(2){
+    border:2px solid #08fdf3;
+}
+#know a:nth-child(3){
+    border:2px solid #24fd61;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.9;
+    background: #000;
+}
+#app img{
+    width: 200px;
+    height: 200px;
+    border: 4px solid #0affbe;
+    margin: 15% 45%;
+}
+#app span{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    border:2px solid #fff;
+    position: fixed;
+    right: 200px;
+    top: 100px;
+    cursor: pointer;
+}
+
+/* about右侧设计 */
+#right-about {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+/* right know 个人技能简介 */
+#right-about p{
+    width: 90%;
+    height: 140px;
+    margin: 30px 20px;
+    color: #111111;
+    font-size: 20px;
+    line-height: 30px;
+}

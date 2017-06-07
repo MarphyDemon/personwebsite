@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            background-color: #666;
+        }
+
+        #container {
+            width: 400px;
+            height: 434px;
+            margin: 150px auto;
+        }
+
+        #big-pic {
+            width: 400px;
+            height: 320px;
+            position: relative;
+        }
+
+        #big-img li {
+            width: 400px;
+            height: 320px;
+            overflow: hidden; /*    后加 */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #left, #right {
+            width: 200px;
+            height: 320px;
+            opacity: 0;
+            position: absolute;
+            z-index: 99999;
+        }
+
+        #left {
+            left: 0;
+            /*top: 0;*/
+            margin-left: 10px;
+        }
+
+        #right {
+            /*top: 0; */
+            right: 0;
+            margin-right: 10px;
+        }
+
+        #left-btn {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 130px;
+            left: 0;
+            background: url("../image/special/btn.gif");
+        }
+
+        #right-btn {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 130px;
+            right: 0;
+            background: url("../image/special/btn.gif") 0 -60px;
+        }
+
+        #text {
+            width: 400px;
+            height: 30px;
+            background-color: #000000;
+            opacity: 0.5;
+            position: absolute;
+            bottom: 0;
+            line-height: 30px;
+            color: #ffffff;
+            z-index: 99998;
+        }
+
+        #text-left {
+            margin-left: 20px;
+            float: left;
+        }
+
+        #text-right {
+            margin-right: 20px;
+            float: right;
+
+        }
+
+        #small-pic {
+            width: 400px;
+            height: 114px;
+            position: relative;
+            overflow: hidden;
+            background-color: #999;
+        }
+
+        #small-img {
+            width: 780px;
+            position: absolute;
+            left: 0;
+        }
+
+        #small-img li {
+            width: 120px;
+            height: 94px;
+            float: left;
+            margin: 10px 0 10px 10px;
+            opacity: 0.6;
+        }
+
+        #small-img li img {
+            width: 120px;
+            height: 94px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="big-pic">
+        <ul id="big-img">
+            <li style="z-index:1"><img src="../image/special/7.jpg" alt="" title="11111"/></li>
+            <li><img src="../image/special/8.jpg" alt="" title="22222"/></li>
+            <li><img src="../image/special/3.jpg" alt="" title="33333"/></li>
+            <li><img src="../image/special/4.jpg" alt="" title="44444"/></li>
+            <li><img src="../image/special/5.jpg" alt="" title="55555"/></li>
+            <li><img src="../image/special/6.jpg" alt="" title="66666"/></li>
+        </ul>
+        <div id="left">
+            <span id="left-btn"></span>
+        </div>
+        <div id="right">
+            <span id="right-btn"></span>
+        </div>
+        <div id="text">
+            <span id="text-left">11111</span>
+
+            <div id="text-right">
+                <span id="num">1</span>/<span>6</span>
+            </div>
+        </div>
+    </div>
+    <div id="small-pic">
+        <div id="small-img">
+            <ul>
+                <li style="opacity: 1"><img src="../image/special/7.jpg" alt=""/></li>
+                <li><img src="../image/special/8.jpg" alt=""/></li>
+                <li><img src="../image/special/3.jpg" alt=""/></li>
+                <li><img src="../image/special/4.jpg" alt=""/></li>
+                <li><img src="../image/special/5.jpg" alt=""/></li>
+                <li><img src="../image/special/6.jpg" alt=""/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/animate.js"></script>
+<script>
+    var oContainer = document.getElementById("container");
+    var oLeft = document.getElementById("left");
+    var oRight = document.getElementById("right");
+    var oLeftBtn = document.getElementById("left-btn");
+    var oRightBtn = document.getElementById("right-btn");
+    var oBigImg = document.getElementById("big-img");
+    var aBigImg = oBigImg.getElementsByTagName("li");
+    var oSmallImg = document.getElementById("small-img");
+    var aSmallImg = oSmallImg.getElementsByTagName("li");
+    var oTextLeft = document.getElementById("text-left");
+    var oNum = document.getElementById("num");
+    var iNow = 0;
+    var zIndex = 1;
+    var timer;
+    oLeft.onmouseover = oRight.onmouseover = function () {
+        animate(this, {opacity: 100});
+    };
+    oLeft.onmouseout = oRight.onmouseout = function () {
+        animate(this, {opacity: 0});
+    };
+
+    oLeftBtn.onclick = oRightBtn.onclick = function () {
+        if (this == oLeftBtn) {
+            iNow--;
+            if (iNow == -1) {
+                iNow = aBigImg.length - 1;
+            }
+        } else {
+            iNow++;
+            if (iNow == aBigImg.length) {
+                iNow = 0;
+            }
+        }
+        changeImg(iNow);
+    };
+
+    function changeImg(idx) {
+        aBigImg[idx].style.zIndex = zIndex++;
+        aBigImg[idx].style.height = 0;
+
+        oNum.innerHTML = idx + 1;
+        oTextLeft.innerHTML = aBigImg[idx].getElementsByTagName("img")[0].title;
+
+        iNow = idx;
+        for (var i = 0; i < aSmallImg.length; i++) {
+            aSmallImg[i].style.opacity = 0.6;
+        }
+        aSmallImg[idx].style.opacity = 1;
+        if (idx == 0) {
+            animate(oSmallImg, {left: 0});
+        } else if (idx == aSmallImg.length - 1) {
+            animate(oSmallImg, {left: -(idx - 2) * (aSmallImg[0].offsetWidth + 10)});
+        } else {
+            animate(oSmallImg, {left: -(idx - 1) * (aSmallImg[0].offsetWidth + 10)});
+        }
+
+        animate(aBigImg[idx], {height: 320});
+    }
+
+
+    for (var i = 0; i < aSmallImg.length; i++) {
+        aSmallImg[i].index = i;
+        aSmallImg[i].onmouseover = function () {
+            this.style.opacity = 1;//出错
+        };
+        aSmallImg[i].onmouseout = function () {
+            if (this.index != iNow) {
+                this.style.opacity = 0.6;//出错
+            }
+        };
+        aSmallImg[i].onclick = function () {
+            if(this.index!=iNow) {
+                changeImg(this.index);
+            }
+        };
+    }
+
+    function Time() {
+        timer = setInterval(function () {
+            oRightBtn.onclick();
+        }, 1500);
+    }
+    Time();
+    oContainer.onmouseover = function () {
+        clearInterval(timer);
+    };
+    oContainer.onmouseout = function () {
+        Time();
+//        timer = setInterval(function () {
+//            oRightBtn.onclick();
+//        }, 1500);
+    };
+</script>
+</body>
+</html>

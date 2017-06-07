@@ -1,0 +1,87 @@
+﻿
+
+
+
+/* =============================================================
+   contact
+ ============================================================ */
+#hire-me h1 {
+    color: #2549bb;
+}
+
+#news button{
+    border-color: #2549bb;
+}
+
+#IDnews h3{
+    color: #2549bb;
+}
+/* =============================================================
+  device
+ ============================================================ */
+
+#client h2{
+    color: #2549bb;
+}
+
+/* =============================================================
+  header
+ ============================================================ */
+#header img{
+    border: 5px solid  #2549BB;
+}
+#left-head h1{
+    color:  #2549BB;
+}
+#left-head a{
+    border: 3px solid  #2549BB;
+}
+#nav ul a .icon-active{
+    background:  #2549BB;
+}
+#right-head h1{
+    color: #2549bb;
+}
+#right-head a{
+    border: 3px solid  #2549BB;
+}
+
+#back-top{
+    background-color: #2549bb;
+}
+/* =============================================================
+        project
+ ============================================================ */
+#project-des h2{
+    color: #2549bb;
+}
+
+/*=====================================
+    resume
+  ===================================*/
+
+#download_txt h2{
+    color:  #2549bb;
+}
+#download_txt a{
+    border: 4px solid #2549BB;
+}
+#details #sel-skill ul .board:after {
+    border-bottom-color: #2549BB !important;
+}
+.ski span{
+    color: #2549bb;
+}
+/*=====================================
+    skill
+===================================*/
+
+.wave h2{
+    color: #2549bb;
+}
+#download_PDF h2{
+    color:  #2549bb;
+}
+#download_PDF a{
+    border: 4px solid #2549bb;
+}

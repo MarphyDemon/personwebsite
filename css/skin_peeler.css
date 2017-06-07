@@ -1,0 +1,78 @@
+/*
+*   ��໻������ʽ
+*/
+
+.switcher{
+    width: 94px;
+    height:220px;
+    position: fixed;
+    left: -50px;
+    top: 150px;
+    z-index:9999;
+    -webkit-transition:all .4s ease-in-out;
+    -moz-transition:all .4s ease-in-out;
+    -ms-transition:all .4s ease-in-out;
+    -o-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out;
+}
+
+.switcher #switch-panel{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: relative;
+    top: 15px;
+    float: right;
+    border-radius: 4px;
+    text-align: center;
+}
+.switcher #switch-panel i{
+    line-height: 40px;
+    font-size: 30px;
+}
+
+#choose{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+    left: 0;
+    font-size: 16px;
+    background: #fff;
+    /*padding-top: 15px;*/
+}
+.switcher .colors-list{
+    width: 50px;
+    height: 220px;
+    position: relative;
+    left: 0;
+    display: block;
+    background: #fff;
+    border-radius: 4px;
+    padding-bottom: 15px;
+}
+.colors-list li{
+    display: inline-block;
+}
+.colors-list li a{
+    width: 34px;
+    height: 34px;
+    margin: 8px;
+    display: block;
+}
+
+.switcher .colors-list a.pink{
+    background: rgb(255,5,85);
+}
+.switcher .colors-list a.green{
+    background: #00ADAD;
+}
+.switcher .colors-list a.blue{
+    background: #2549BB;
+}
+.switcher .colors-list a.brown{
+    background: #9b8e00;
+}
+

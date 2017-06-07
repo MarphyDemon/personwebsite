@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>无缝滑动</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 400px;
+            height: 200px;
+            background-color: #cccccc;
+            border: 1px solid #000000;
+            margin: 150px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #content {
+            width: 520px;
+            height: 120px;
+            position: absolute;
+        }
+
+        li {
+            list-style: none;
+            width: 120px;
+            height: 120px;
+            background-color: black;
+            font-size: 40px;
+            text-align: center;
+            line-height: 120px;
+            color: #cccccc;
+            float: left;
+            margin-right: 10px;
+        }
+
+        #arrow {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+        }
+
+        span {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-color: #999999;
+            position: relative;
+            left: -70px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="content">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </div>
+    <div id="arrow">
+        <span id="left">&lt;&lt;向左</span>
+        <span id="right">向右&gt;&gt;</span>
+    </div>
+</div>
+<script>
+
+        var oContent = document.getElementById("content");
+        var oLeft = document.getElementById("left");
+        var oRight = document.getElementById("right");
+        var speed = -2;
+
+        oContent.innerHTML = oContent.innerHTML + oContent.innerHTML;
+        var aLi = oContent.getElementsByTagName("li");
+        oContent.style.width = (aLi[0].offsetWidth + 10) * aLi.length + "px";
+
+        setInterval(function () {
+            oContent.style.left = oContent.offsetLeft + speed + "px";
+            if (oContent.offsetLeft <= -oContent.offsetWidth / 2) {
+                oContent.style.left = 0;
+            } else if (oContent.offsetLeft >= 0) {
+                oContent.style.left = -oContent.offsetWidth / 2 + "px";
+            }
+        }, 30);
+
+        oLeft.onclick = function () {
+            speed = -2;
+        };
+        oRight.onclick = function () {
+            speed = 2;
+        };
+
+
+
+</script>
+</body>
+</html>

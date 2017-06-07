@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width" initial="1.0">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body{
+            margin-top: 35px;
+            text-align: center;
+            padding: 0;
+
+        }
+        ul,ol{
+            list-style:none;
+            padding: 0;
+        }
+        h3,p{
+            padding: 20px;
+        }
+        .container{
+            width:960px;
+            margin:0 auto;
+        }
+        #header,#nav,#footer,#mainbody,#sidebar{
+            background: rgba(146, 146, 146, 0.59);
+            line-height: 25px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            color: rgba(0, 0, 0, 0.38);
+        }
+        #mainbody,#sidebar{
+            float: left;
+            height: 300px;
+            margin-bottom: 35px;
+        }
+        #mainbody{
+            width: 620px;
+            margin-right: 20px;
+        }
+        #sidebar {
+            width:320px;
+        }
+        #footer{
+            clear: both;
+            background:none;
+            border: 1px solid #eee;
+        }
+        #footer h5{
+            margin-top: 20px;
+        }
+        #header{
+            background: none;
+            border: 1px solid #eee;
+        }
+        #header h1{
+            font-size: 2.5em;
+            color: #000;
+            margin-top: 50px;
+        }
+        #header h2{
+            font-size: 1em;
+            color: #272727;
+        }
+        #nav li,#nav li a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 7px 15px;
+            color: #00c5ff;
+        }
+        #nav li a:hover{
+            background-color: #0f4873;
+        }
+        #nav{
+            background: none;
+        }
+        #nav .active{
+            background: #eee;
+        }
+        .toggle-btn{
+            display: none;
+        }
+
+
+
+        @media(min-width: 1200px){
+            .container{
+                width:1170px;
+            }
+            #mainbody{
+                width:770px;
+            }
+            #sidebar{
+                width: 370px;
+            }
+        }
+
+        @media(max-width:959px){
+            .container{
+                width: 100%;
+            }
+            #mainbody{
+                width: 67%;
+            }
+            #sidebar{
+                width: 30%;
+                float:right;
+            }
+        }
+
+        @media(max-width:767px) {
+            #mainbody, #sidebar {
+                width: 100%;
+                float: none;
+            }
+
+            #header {
+                font-size: 12px;
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            .toggle-btn {
+                display: inline-block;
+                font-size: 25px;
+                text-decoration: none;
+                background: #000;
+                color: white;
+                padding: 7px 10px;
+                position: absolute;
+                right: 0px;
+                top: 80px;
+            }
+
+            #nav .close {
+                display: none;
+            }
+
+            #nav:target .close {
+                display: inline-block;
+            }
+
+            #nav {
+                display: none;
+            }
+
+            #nav:target {
+                display: block;
+                position: absolute;
+                top: 0;
+                padding-top:105px;
+                width: 100%;
+                animation: show 1s ease forwards;
+            }
+
+            @keyframes show {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: rotateX(0deg);
+                }
+                50% {
+                    opacity: 0.5;
+                    -webkit-transform: rotateX(-50deg);
+                }
+                100% {
+
+                }
+            }
+
+            #nav:target ul {
+                background: #000;
+            }
+
+            #nav:target li, #nav:target li a {
+                display: block;
+                color: #eee;
+                text-align: left;
+            }
+
+            /* 目标状态下的导航的列表下的 a 标签的悬停样式 */
+            #nav:target li a:hover {
+                background: #3b3b3b;
+            }
+
+            /* 目标状态下导航的激活状态的样式 */
+            #nav:target .active {
+                background: #272727;
+            }
+
+        }
+
+
+
+    </style>
+</head>
+<body id="top">
+    <div class="wrapper">
+        <header id="header">
+            <div class="container">
+                <h1>Marphy</h1>
+                <h2>ksadfjkasdfksajdfakls</h2>
+            </div>
+        </header>
+        <div class="container">
+            <a href="#nav" class="open toggle-btn"><i class="icon-reorder"></i></a>
+            <nav id="nav">
+
+                <ul>
+                    <li><a href="#" class="active">项目 1</a></li>
+                    <li><a href="#">项目 2</a></li>
+                    <li><a href="#">项目 3</a></li>
+                    <li><a href="#">项目 4</a></li>
+                    <li><a href="#">项目 5</a></li>
+                </ul>
+                <a href="#top" class="close toggle-btn"><i class="icon-remove-sign"></i></a>
+            </nav>
+
+
+            <article id="mainbody">
+                <h3>主体</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+            </article>
+            <aside id="sidebar">
+                <h3>边栏</h3>
+                <p>Donec dolor arcu, interdum sed turpis faucibus, placerat ultricies felis. Donec pulvinar gravida rhoncus. </p>
+            </aside>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <h5>&copy; Copyright Ninghao.net</h5>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

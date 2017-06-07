@@ -1,0 +1,101 @@
+/*
+*  skill 技能块编写
+*/
+
+#skill{
+    width: 100%;
+    height: 390px;
+    background: url("../image/skill.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+#perskill{
+    width: 80%;
+    height: 290px;
+    line-height: 100%;
+    margin: 40px  80px;
+}
+
+#left_skill{
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding-top: 20px;
+}
+
+.wave{
+    /*width: 150px;*/
+    height: 220px;
+    float: left;
+    line-height: 100%;
+    margin: 50px 3.69px;
+    text-align: center;
+}
+.wave h2{
+    padding-top: 20px;
+    line-height: 100%;
+    color: rgb(255, 5, 85);
+}
+
+#right_skill{
+    width: 20%;
+    height: 100%;
+    float: right;
+    margin-top:50px;
+
+}
+
+#download_PDF{
+    width: 70%;
+    height: 200px;
+    margin: 0 auto;
+}
+#download_PDF h2{
+    /*height: 40px;*/
+    color:  rgb(255, 5, 85);
+    font-size: 38px;
+    font-weight: 600;
+}
+
+#download_PDF a{
+    display: block;
+    margin-top: 50px;
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+    border: 4px solid rgb(255,5,85);
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* canvas制作圆形水波进度条动画特效 */
+
+.canvas{
+    margin: 0 auto;
+    display: block;
+}
+.input{
+    /*display: none;*/
+    /*/!*width: 0;*!/*/
+    /*display: block;*/
+    margin: 0 auto;
+}
+#perskill #left_skill input{
+    width: 80%;
+}
+.input::before{
+    display: none;
+    color: #000;
+    content:attr(min);
+    padding-right: 10px;
+}
+.input::after{
+    display: none;
+    color: #000;
+    content: attr(max);
+    padding-left: 10px;
+}
+
