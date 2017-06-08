@@ -38,9 +38,10 @@
     width: 50%;
     height: 310px;
     float: left;
+    position: relative;
 }
 #news input:nth-child(1){
-    width: 80%;
+    width: 70%;
     height: 30px;
     border-radius: 4px;
     line-height: 30px;
@@ -50,8 +51,8 @@
 	color: #9c9c9c;
 	font-weight: 400;
 }
-#news input:nth-child(2){
-    width: 80%;
+#news input:nth-child(3){
+    width: 70%;
     height: 30px;
     border-radius: 4px;
     line-height: 30px;
@@ -62,7 +63,7 @@
     font-weight: 400;
 }
 #news textarea{
-    width: 80%;
+    width: 70%;
     height: 150px;
     background-color: transparent;
     border-radius: 4px;
@@ -71,6 +72,10 @@
 	font-size: 15px;
 	color: #9c9c9c;
     font-weight: 400;
+}
+#message{
+    position: absolute;
+    top:180px;
 }
 #news input:focus {
     background: #f6f6f6;
@@ -87,7 +92,7 @@
     height: 35px;
     border-radius: 8px;
     border-color: rgb(255, 5, 85);
-    margin: 20px 30%;
+    margin: 20px 22%;
     color: #fff;
     background: rgba(0, 0, 0, 0.70);
     text-align: center;

@@ -9,15 +9,27 @@
 require_once("./fun.php");
 	if(isset($_POST['sub'])){
         $name=$_POST['name'];
-        $email=$_POST['email'];
+        $mail=$_POST['email'];
         $message = $_POST['message'];
-        $flag = sendMail('1907588771@qq.com',"email:".$email,"姓名:".$name.",消息:".$message);
-        if($flag){
-            echo '<script language="javascript">window.alert("发送邮件成功！");</script>';
-        }else{
-            echo '<script language="javascript">window.alert("发送邮件失败！");</script>';
+        function isEmail($email){
+            $mode = '/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/';
+            if(preg_match($mode,$email)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
-
+        if($name!=null&&$mail!=null&&isEmail($mail)){
+            $flag = sendMail('1907588771@qq.com',"email:".$mail,"姓名:".$name.",消息:".$message);
+            if($flag){
+                echo '<script language="javascript">window.alert("发送邮件成功！");</script>';
+            }else{
+                echo '<script language="javascript">window.alert("发送邮件失败！");</script>';
+            }
+        }else{
+            echo '<script language="javascript">window.alert("发送邮件失败！");'.$str.'</script>';
+        }
     }
 ?>
 
@@ -361,9 +373,11 @@ require_once("./fun.php");
             <div id="news">
                 <form action="" method="post">
                     <input type="text" name="name" placeholder="Your Name"/>
+                    <span id="name"></span>
                     <input type="text" name="email" placeholder="Your Email"/>
+                    <span id="email"></span>
                     <textarea type="text" name="message" placeholder="Message"></textarea>
-
+                    <span id="message"></span>
                     <button name="sub">contact me</button>
                 </form>
 
