@@ -28,7 +28,7 @@ require_once("./fun.php");
                 echo '<script language="javascript">window.alert("发送邮件失败！");</script>';
             }
         }else{
-            echo '<script language="javascript">window.alert("发送邮件失败！");'.$str.'</script>';
+            echo '<script language="javascript">window.alert("发送邮件失败！");</script>';
         }
     }
 ?>
